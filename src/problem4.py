@@ -76,11 +76,11 @@ def problem4(number_of_stairs, step_size, starting_point, window):
     start_x = starting_point.x
     start_y = starting_point.y
     length = step_size
-
+    window = window
     for k in range(number_of_stairs + 1):
-        line = rg.Line(rg.Point(start_x + (length * (k)), (start_y - (length * (k)))),
-                       rg.Point(start_x + (length * (k)),
-                                (start_y - (length * (k)))))
+        line = rg.Line(rg.Point(start_x + (length * (k-1)), (start_y - (length * (k-1)))),
+                       rg.Point(start_x + (length * (k-1)),
+                                (start_y - (length * (k+1)))))
         line.attach_to(window)
 
         window.render()
