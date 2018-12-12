@@ -173,9 +173,10 @@ def problem3a(r, s):
     #    **  that is DEFINED ABOVE.
     ###########################################################################
     t = 0
-    for k in range(r, s):
+    for k in range((s+1) - r):
         if (sum_of_digits(r**3)) % 2 == 1:
-            t += k
+            return k
+        t = t + k
     return t
 
 
