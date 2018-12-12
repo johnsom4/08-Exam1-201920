@@ -47,35 +47,35 @@ def test_factor_sum():
     # Test 1:
     expected = 11
     actual = factor_sum(28)
-    print()
+    print("Test 1:")
     print('Expected:', expected)
     print('Actual:  ', actual)
 
     # Test 2
     expected = 4
     actual = factor_sum(25)
-    print()
+    print("Test 2:")
     print('Expected:', expected)
     print('Actual:  ', actual)
 
     # Test 3
     expected = 5
     actual = factor_sum(31)
-    print()
+    print("Test 3:")
     print('Expected:', expected)
     print('Actual:  ', actual)
 
     # Test 4
     expected = 6
     actual = factor_sum(45)
-    print()
+    print("Test 4:")
     print('Expected:', expected)
     print('Actual:  ', actual)
 
     # Test 5
     expected = 3
     actual = factor_sum(29)
-    print()
+    print("Test 5:")
     print('Expected:', expected)
     print('Actual:  ', actual)
 
