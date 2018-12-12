@@ -172,10 +172,13 @@ def problem3a(r, s):
     #    **  use (call) the   sum_of_digits   function
     #    **  that is DEFINED ABOVE.
     ###########################################################################
+    t = 0
+    for k in range(r, s):
+        if (sum_of_digits(r**3)) % 2 == 1:
+            t += k
+    return t
 
-    for k in range((s + 1) - r):
-        if r**3 % 2 == 1:
-            return sum_of_digits(k)
+
 
 
 
@@ -286,12 +289,12 @@ def problem3b(m, r):
            which is approximately 12.020144157845959.
      """
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
     s = 0
     for k in range(m+1):
-        s += (k / (r + k)**(k-1))
+        s += (k / (r + (k-1))**k)
     return s
 
 

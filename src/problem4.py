@@ -68,7 +68,7 @@ def problem4(number_of_stairs, step_size, starting_point, window):
       :type window:            rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # IMPORTANT: For PARTIAL CREDIT, you can draw just the black "bottoms"
     #            of the stair steps.
@@ -77,13 +77,23 @@ def problem4(number_of_stairs, step_size, starting_point, window):
     start_y = starting_point.y
     length = step_size
     window = window
-    for k in range(number_of_stairs + 1):
-        line = rg.Line(rg.Point(start_x + (length * (k-1)), (start_y - (length * (k-1)))),
-                       rg.Point(start_x + (length * (k-1)),
-                                (start_y - (length * (k+1)))))
-        line.attach_to(window)
 
-        window.render()
+    for k in range(number_of_stairs):
+        line = rg.Line(rg.Point(start_x + (length * (k)), (start_y - (length * (k+1)))),
+                       rg.Point(start_x + (length * (k+1)),
+                                (start_y - (length * (k+1)))))
+        line2 = rg.Line(rg.Point(start_x + (length * (k)), (start_y - (length * (k)))),rg.Point(start_x + (length * (k)),
+                                (start_y - (length * (k+1)))))
+        point = rg.Point(start_x, start_y)
+        line.thickness = 3
+        line2.thickness = 3
+        line2.color = 'magenta'
+        point.attach_to(window)
+        line.attach_to(window)
+        line2.attach_to(window)
+    point2 = rg.Point(start_x + (length * (k + 1)), start_y - (length * (k + 1)))
+    point2.attach_to(window)
+    window.render()
 
 
 # -----------------------------------------------------------------------------
